@@ -5,7 +5,7 @@ import { keyTypes, type CalculatorState, type CalculatorKey, processKey } from '
 import { Head, MainLayout } from './components';
 import './styles.css';
 
-export const initialState: CalculatorState = {
+const initialState: CalculatorState = {
     open: true,
     currentEntry: 0,
     nextEntry: null,
