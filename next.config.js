@@ -1,8 +1,10 @@
-const withMDX = require('@next/mdx')()
+import createMDX from '@next/mdx';
 
-module.exports = withMDX({
+const withMDX = createMDX();
+
+export default withMDX({
   // Cấu hình Next.js của bạn
   experimental: {
     mdxRs: true,
   },
-}) 
+}); 
