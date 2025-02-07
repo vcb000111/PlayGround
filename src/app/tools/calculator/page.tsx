@@ -5,7 +5,7 @@ import { keyTypes, type CalculatorState, type CalculatorKey, processKey } from '
 import { Head, MainLayout } from './components';
 import './styles.css';
 
-const initialState: CalculatorState = {
+export const initialState: CalculatorState = {
     open: true,
     currentEntry: 0,
     nextEntry: null,
@@ -15,6 +15,10 @@ const initialState: CalculatorState = {
     automaticTurnOff: null,
     lastAction: null,
     lastCalculation: {},
+    currentValue: '0',
+    previousValue: null,
+    operator: null,
+    newNumber: true
 };
 
 const automaticTurnOffTime = 600000; // Automatically turns off after 10 minutes of inactivity
