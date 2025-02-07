@@ -18,10 +18,33 @@ export interface CalculatorState {
   automaticTurnOff: NodeJS.Timeout | null;
   lastAction: string | null;
   lastCalculation: {
-    operation?: string | null;
-    nextEntry?: number | null;
+    operation: string | null;
+    nextEntry: number | null;
   };
+  currentValue: string;
+  previousValue: string | null;
+  operator: string | null;
+  newNumber: boolean;
 }
+
+export const initialState: CalculatorState = {
+  open: true,
+  currentEntry: 0,
+  nextEntry: null,
+  operation: null,
+  float: false,
+  memory: null,
+  automaticTurnOff: null,
+  lastAction: null,
+  lastCalculation: {
+    operation: null,
+    nextEntry: null
+  },
+  currentValue: '0',
+  previousValue: null,
+  operator: null,
+  newNumber: true
+};
 
 export interface CalculatorKey {
   type: KeyType;

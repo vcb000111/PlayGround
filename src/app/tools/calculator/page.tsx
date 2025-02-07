@@ -3,23 +3,8 @@
 import React, { PureComponent } from 'react';
 import { keyTypes, type CalculatorState, type CalculatorKey, processKey } from './logic';
 import { Head, MainLayout } from './components';
+import { initialState } from './logic/constants';
 import './styles.css';
-
-export const initialState: CalculatorState = {
-    open: true,
-    currentEntry: 0,
-    nextEntry: null,
-    operation: null,
-    float: false,
-    memory: null,
-    automaticTurnOff: null,
-    lastAction: null,
-    lastCalculation: {},
-    currentValue: '0',
-    previousValue: null,
-    operator: null,
-    newNumber: true
-};
 
 const automaticTurnOffTime = 600000; // Automatically turns off after 10 minutes of inactivity
 

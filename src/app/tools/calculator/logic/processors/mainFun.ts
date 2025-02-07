@@ -1,5 +1,4 @@
-import { CalculatorState, CalculatorKey } from '../constants';
-import { initialState } from '../initialState';
+import { CalculatorState, CalculatorKey, initialState } from '../constants';
 
 export default function mainFunction(state: CalculatorState, key: CalculatorKey) {
   switch (key.value) {
